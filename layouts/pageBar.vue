@@ -13,7 +13,7 @@
 
     <BarBottom 
     :title="$slidev.configs.preTitle" 
-    :author="Object.keys($slidev.configs.authors[Object.keys($slidev.configs.authors)[0]])[0]" 
+    :author="Object.keys($slidev.configs.authors[Object.keys($slidev.configs.authors)[3]])[0]"
     :meeting="$slidev.configs.meeting">
     </BarBottom>
 

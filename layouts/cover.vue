@@ -22,7 +22,7 @@ const props = defineProps({
   },
   preDate: {
     type: String,
-    default: new Date().toLocaleDateString(),
+    default: '4/24/2024',
   },
 });
 
@@ -55,7 +55,7 @@ console.log(instituteDict);
         <div v-if="authorList.length" class="">
         <p v-if="authorList.length">
           <template v-for="(author, idx) in authorList">
-            <span :class="{ 'underline': idx === 0 }">{{ author }}</span>
+            <span :class="{ 'underline': idx === 3 }">{{ author }}</span>
             <sup v-if="authorsDict[author].instituteNum.length > 0">
               <template v-for="(num, index) in authorsDict[author].instituteNum">
                 <span v-if="index > 0">, </span>

@@ -16,7 +16,7 @@ export default {
 
 <template>
   <div v-if="title || social" class="bg-barBottom flex absolute w-full bottom-0 left-0 py-0.5 px-2 text-sm flex-items-center">
-    <div class="w-1/3 text-left pl-2 flex">
+    <div class="w-1/2 text-left pl-2 flex">
      {{ author }} <div class="divider"></div> {{ title }}
     </div>
     <div class="w-1/3 flex justify-center">
