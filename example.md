@@ -50,7 +50,18 @@ layout: pageBar
 ---
 
 # Overview
-<br>
+
+DarkSHINE Software is a software package, including five parts: <span style="color:#4ec4d4">**DSimu**</span>, <span style="color:#4ec4d4">**DAna**</span>, <span style="color:#4ec4d4">**DDis**</span>, and <span style="color:#4ec4d4">**DPlot**</span>.
+
+<div grid="~ cols-[310px_1fr] gap-2">
+<div>
+
+- <span style="color:#4ec4d4">**DSimu**</span> is the <span style="color:#4ec4d4">**simulation program**</span> based on Geant4, characterized by Dark SHINE detector, controlled by <span style="color:#4ec4d4">**yaml configuration**</span>.
+- <span style="color:#4ec4d4">**DAna**</span> is a <span style="color:#4ec4d4">**framework for the analysis and reconstruction tools**</span>. It requires the output ROOT file (involving Geometry, DMagnet and DEvent) from DSimu.
+- <span style="color:#4ec4d4">**DDis**</span> is the <span style="color:#4ec4d4">**event display**</span> for DSS. (requires Geometry and DEvent)
+- <span style="color:#4ec4d4">**DPlot**</span> is a quick plotting program for newbies and lazy man.
+- <span style="color:#4ec4d4">**DEvent**</span> is the <span style="color:#4ec4d4">**generic data structure**</span> in DSS.
+</div>
 
 <Transform :scale="1.0">
 <div>
@@ -80,15 +91,82 @@ mindmap
 ```
 </div>
 </Transform>
+</div>
 
 ---
 layout: pageBar
 ---
 
-# Versions and Milstones
+# From Baseline 1.0 to 1.6: Detector Construction
 
-<Transform :scale="0.8">
-<div>
+Detector Construction Overview
+
+<div grid="~ cols-2 gap-2">
+
+![img](/images/overview_1.0.png){width=600px}
+
+<div class="flex justify-center items-center" style="height: 50vh;">
+
+![img](/images/overview_1.6.png){width=400px}
+</div>
+
+</div>  
+
+---
+layout: pageBar
+hideInToc: true
+---
+
+# From Baseline 1.0 to 1.6: Detector Construction
+
+Tracking System
+
+Baseline 1.6 Tracker uses <span style="color:#4ec4d4">**Si micro-strip**</span> ( $30 \mathrm{\mu m}$ ) and <span style="color:#4ec4d4">**non-uniform magnetic field**</span>, while Baseline 1.0 uses non-strip (truth hit) and uniform magnetic field.
+
+| Baseline |                                                  | Magnetic Field                                  | Component                                              | Material                | Center Z (mm)                                   | Size (mm)                                                                                                                                                                            | Layer<br>Number           |
+|----------|--------------------------------------------------|-------------------------------------------------|--------------------------------------------------------|-------------------------|-------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|
+| 1.0      | ![img.png](/images/tracker_1.0.png){width=100px} | $B_y=-1.5 \mathrm{T}$                  | Tagging Tracker<br> <br>Target<br> <br>Recoil Tracker  | Si<br> <br>W<br> <br>Si | -607.83 ~ -7.83<br> <br>0<br> <br>7.73 ~ 180.23 | 10, 20, 0.1<br> <br>10, 20, 0.35<br> <br>10~25, 20, 0.1                                                                                                                              | 7x2<br> <br>1<br> <br>6x2 |
+| 1.6      | ![img.png](/images/tracker_1.6.png){width=100px} | ![img.png](/images/bfiled_1.6.png){width=200px} | Tagging Tracker<br> <br>Target<br> <br>Recoil Tracker  | Si<br> <br>W<br> <br>Si | -607.83 ~ -7.83<br> <br>0<br> <br>7.73 ~ 180.23 | 20.1, 10, <span style="color:#4ec4d4">**0.15**</span><br> <br>20, 10, 0.35<br> <br>20.1~50.1, 20, <span style="color:#4ec4d4">**0.15**</span> | 7x2<br> <br>1<br> <br>6x2 |
+
+---
+layout: pageBar
+hideInToc: true
+---
+
+# From Baseline 1.0 to 1.6: Detector Construction
+
+ECAL
+
+| Baseline |                                               | Cell Number | Cell Gap | Gap<br>Material | Cell Components | Material | Size |
+|----------|-----------------------------------------------|-------------|----------|-----------------|-----------------|----------|------|
+| 1.0      | ![img.png](/images/ecal_1.0.png){width=100px} |             |          |                 |                 |          |      |
+| 1.6      | ![img.png](/images/ecal_1.6.png){width=120px} |             |          |                 |                 |          |      |
+
+---
+layout: pageBar
+hideInToc: true
+---
+
+# From Baseline 1.0 to 1.6: Detector Construction
+
+HCAL
+
+In Baseline 1.6, The Number is optimized. The Configuration changed to X-Abs-Y. And SideHCAL is added around the 4 sides of ECAL.
+
+| Baseline |                                               | Cell Number | Cell Gap | Gap<br>Material | Cell Components | Material | Size |
+|----------|-----------------------------------------------|-------------|----------|-----------------|-----------------|----------|------|
+| 1.0      | ![img.png](/images/hcal_1.0.png){width=200px} |             |          |                 |                 |          |      |
+| 1.6      | ![img.png](/images/hcal_1.6.png){width=150px} |             |          |                 |                 |          |      |
+
+
+---
+layout: pageBar
+---
+
+# From Baseline 1.0 to 1.6: Versions and Milstones
+
+Many functions and optimizations have been added to the software since 2020.
+
 ```mermaid
 timeline
     section Baseline 1.0
@@ -106,21 +184,6 @@ timeline
     2023 Jan - Mar : Add DAna Riemann Fitting 
                    : Fixe Sensitive Detector bug
                    : Optimize Sensitive Detector Speed
-```
-</div>
-</Transform>
-
----
-layout: pageBar
-hideInToc: true
----
-
-# Versions and Milstones
-
-<Transform :scale="0.9">
-<div>
-```mermaid
-timeline
     section Baseline 1.6
     2023 Apr - Jun : Add Vertexing, and GNN Tracking 
                    : Add ECAL TopoClustering, ML IO
@@ -132,30 +195,27 @@ timeline
                    : Optimized Tracking Algorithm
                    : Add Tracking Parser
 ```
-</div>
-</Transform>
 
 ---
 layout: pageBar
 ---
 
-# Pipeline and Validation
+# CI/CD Pipeline and Validation
 
 <br>
 
 <div grid="~ cols-2 gap-2">
 <div>
 
-Pipeline will be triggered when :
-- **Merge request** to master branch
-- With keyword `[CI]` or `[VIP]` in the commit message
+Pipeline to build and draw <span style="color:#4ec4d4">**validation plots**</span> will be triggered in each commit to <span style="color:#4ec4d4">**master**</span> branch.
+- Or with keyword `[CI]` or `[VIP]` in the commit message
 
 ![img](/images/pipeline.png){width=400px}
 
 </div>
 <div>
 
-Validation plots will be downloadable in the artifacts.
+- Validation plots in the pipeline artifacts, and can be posted on wiki.
 
 ![img](/images/validation_plots.png){width=400px}
 </div>
@@ -165,25 +225,25 @@ Validation plots will be downloadable in the artifacts.
 layout: pageBar
 ---
 
-# CPU Performance and Sample Production
+# CPU Performance and Event Storage
 
 <br>
 
 <div grid="~ cols-2 gap-1">
 <div>
 
-## DSimu Simulation
+## DSimu (Simulation)
 
-Current Simulation Speed is **x21** faster than Baseline 1.0 (900ms)
+Current Simulation Speed is <span style="color:#4ec4d4">**x21**</span> faster than Baseline 1.0 (900ms)
 
 ![img](/images/SimuTime.png){width=500px}
 
 </div>
 <div>
 
-## DAna Reconstruction
+## DAna (Reconstruction)
 
-<br><br>
+~9ms per event
 
 ![img](/images/DAnaTime.png){width=400px}
 
@@ -194,15 +254,26 @@ Current Simulation Speed is **x21** faster than Baseline 1.0 (900ms)
 layout: pageBar
 ---
 
-# CPU Performance and Sample Production
+# Sample Production
+
+<br>
+
+![img](/images/Production.png){width=1100px}
 
 ---
 layout: pageBar
 ---
 
-# Tracking Performance (ActsSequencer)
+# Tracking
 
-Tracking Efficiency and Energy Resolution 
+---
+layout: pageBar
+hideInToc: true
+---
+
+# Tracking
+
+We have two seperate Tracking Algorithms. Here only shows the Tracking Efficiency and Energy Resolution of ActsSequencer.
 
 <Transform :scale="0.9">
 
@@ -230,13 +301,16 @@ layout: pageBar
 ---
 
 # Calorimetry
-<br>
+(For ECAL Clustering etc., see Qibin & Zhiyu's Talk)
 
 ## ECAL Smearing method
 The smearing of ECAL is done in reconstruction/analysis level. For each ECAL cell, the energy of hits are summed, then Gaussian function is used to do the smearing, with the mean value set to truth energy and sigma from the formula $\frac{\sigma}{E}=\frac{A}{\sqrt{E}}+B+\frac{C}{E}$ . The A B C parameters are extracted from standalone simulation with optical process enabled.
 
 ## Smearing parameter used in analysis
 <div grid="~ cols-2 gap-20">
+
+<Transform :scale="0.9">
+<br>
 
 |                     | $A\sqrt{MeV}$ |     $A\sqrt{GeV}$    |       $B$      |      $C/MeV$     |
 |:-------------------:|:-------------:|:-----------------:|:------------:|:----------------:|
@@ -245,14 +319,23 @@ The smearing of ECAL is done in reconstruction/analysis level. For each ECAL cel
 |      R90_S9_PWO4    |    134.56%    |        4.26%      |     0.70%    |     0.0001       |
 |     R90_S36_PWO4    |    73.32%     |        2.32%      |     0.17%    |     0.7051       |
 
+</Transform>
+
 <div>
 
 **Detailed plots: set1**
 
-![img](/images/setup1.png){width=500px}
+![img](/images/setup1.png){width=400px}
 </div>
 
 </div>
+
+---
+layout: pageBar
+hideInToc: true
+---
+
+# Calorimetry
 
 ---
 layout: pageBar
