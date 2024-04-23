@@ -49,7 +49,7 @@ hideInToc: true
 layout: pageBar
 ---
 
-# Simulation Framework Overview
+# Overview
 <br>
 
 <Transform :scale="1.0">
@@ -87,36 +87,79 @@ layout: pageBar
 
 # Versions and Milstones
 
+<Transform :scale="0.8">
+<div>
 ```mermaid
 timeline
     section Baseline 1.0
-    2021 Dec. : Baseline 1.0
+    2020 Aug - 2021 Dec : Baseline 1.0
     section Baseline 1.5
-    2022 Apr. : DSimu Optical Simulation
-    2022 Jul. : DSimu v1.5.0
-    2022 Dec. : DSimu v1.6.0
-    section Baseline 1.6
-    2023 Oct. : Bla
-    2023 Nov. : Bla
-    2024 Apr. : [YF] Parser
-        : [YF] Tracking
+    2022 Apr - Jun : Add DSimu optical simulation
+                   : Add truth information - DTruth
+                   : Optimized simulation speed, event storage, and data transmission between DAna processors
+    2022 Jul - Sep : Add SideHCAL
+                   : Add DSimu flexible Biasing / BiasParticle
+                   : Add DSimu arguments
+    2022 Oct - Dec : Add Staggered ECAL
+                   : Add HCAL MC Calibration
+                   : Optimized DAna Event Classification
+    2023 Jan - Mar : Add DAna Riemann Fitting 
+                   : Fixe Sensitive Detector bug
+                   : Optimize Sensitive Detector Speed
 ```
+</div>
+</Transform>
+
+---
+layout: pageBar
+hideInToc: true
+---
+
+# Versions and Milstones
+
+<Transform :scale="0.9">
+<div>
+```mermaid
+timeline
+    section Baseline 1.6
+    2023 Apr - Jun : Add Vertexing, and GNN Tracking 
+                   : Add ECAL TopoClustering, ML IO
+                   : Add DDis MC Particle Propagation
+    2023 Nov - Dec : Add DSimu truth filter
+                   : More flexible RecECAL
+                   : Add options to tune Tracking speed and resolution
+    2024 Feb - Apr : Add DAna ActsSequencer
+                   : Optimized Tracking Algorithm
+                   : Add Tracking Parser
+```
+</div>
+</Transform>
 
 ---
 layout: pageBar
 ---
 
-# Version Update Detail
+# Pipeline and Validation
 
 <br>
 
-## blabla
+<div grid="~ cols-2 gap-2">
+<div>
 
----
-layout: pageBar
----
+Pipeline will be triggered when :
+- **Merge request** to master branch
+- With keyword `[CI]` or `[VIP]` in the commit message
 
-# Validation and Pipeline
+![img](/images/pipeline.png){width=400px}
+
+</div>
+<div>
+
+Validation plots will be downloadable in the artifacts.
+
+![img](/images/validation_plots.png){width=400px}
+</div>
+</div>
 
 ---
 layout: pageBar
@@ -124,38 +167,60 @@ layout: pageBar
 
 # CPU Performance and Sample Production
 
-Hover on the bottom-left corner to see the navigation's controls panel
-
-## Simulation
-
-## Reconstruction
-
----
-layout: pageBar
----
-
-# Multi-threading for DSimu
-
 <br>
 
+<div grid="~ cols-2 gap-1">
+<div>
+
+## DSimu Simulation
+
+Current Simulation Speed is **x21** faster than Baseline 1.0 (900ms)
+
+![img](/images/SimuTime.png){width=500px}
+
+</div>
+<div>
+
+## DAna Reconstruction
+
+<br><br>
+
+![img](/images/DAnaTime.png){width=400px}
+
+</div>
+</div>
+
 ---
 layout: pageBar
 ---
 
-# Tracking Performance
+# CPU Performance and Sample Production
 
-Two 3D plots for display
+---
+layout: pageBar
+---
 
-Try to interact with the graphs 🥰
+# Tracking Performance (ActsSequencer)
+
+Tracking Efficiency and Energy Resolution 
+
+<Transform :scale="0.9">
+
+| Efficiency | Inclusive | Signal 5 MeV |
+|------------| ---   | --- |
+| Tagging | 99.94% | 99.94% |
+| Recoil | 99.76% | 80.49 %|
+
+</Transform>
 
 <div grid="~ cols-2 gap-20">
 
 <Transform :scale="0.65">
-<PlotlyGraph filePath="Graph/plotly2.json" graphWidth="900"/>
+<PlotlyGraph filePath="/Graph/Acts_TagTrk_P__cut2.json"/>
 </Transform>
 
 <Transform :scale="0.65">
-<PlotlyGraph filePath="Graph/plotly3.json" graphWidth="900"/>
+<PlotlyGraph filePath="/Graph/Res_dActs_RecTrk_P_1_precut.json"/>
 </Transform>
 
 </div>
@@ -165,6 +230,29 @@ layout: pageBar
 ---
 
 # Calorimetry
+<br>
+
+## ECAL Smearing method
+The smearing of ECAL is done in reconstruction/analysis level. For each ECAL cell, the energy of hits are summed, then Gaussian function is used to do the smearing, with the mean value set to truth energy and sigma from the formula $\frac{\sigma}{E}=\frac{A}{\sqrt{E}}+B+\frac{C}{E}$ . The A B C parameters are extracted from standalone simulation with optical process enabled.
+
+## Smearing parameter used in analysis
+<div grid="~ cols-2 gap-20">
+
+|                     | $A\sqrt{MeV}$ |     $A\sqrt{GeV}$    |       $B$      |      $C/MeV$     |
+|:-------------------:|:-------------:|:-----------------:|:------------:|:----------------:|
+|       R90_LYSO      |    31.62%     |        1.00%      |     0.00%    |     0.0000       |
+|       R10_LYSO      |    211.69%    |        6.69%      |     0.00%    |     0.0851       |
+|      R90_S9_PWO4    |    134.56%    |        4.26%      |     0.70%    |     0.0001       |
+|     R90_S36_PWO4    |    73.32%     |        2.32%      |     0.17%    |     0.7051       |
+
+<div>
+
+**Detailed plots: set1**
+
+![img](/images/setup1.png){width=500px}
+</div>
+
+</div>
 
 ---
 layout: pageBar
@@ -181,6 +269,7 @@ layout: pageBar
 ---
 layout: center
 class: "text-center"
+hideInToc: true
 ---
 
 # Thanks
