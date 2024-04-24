@@ -385,7 +385,7 @@ gantt
         Seed for Tracker-ECAL PFA :c1, 2024-04-24, 1w
         Publish ActsSequencer v1.0: after c1, 1h
     section ECAL
-        PFA for rare process i.e. GMM, K-long decay etc. / LLP : c2, after c1, 4w
+        PFA for rare process i.e. GMM, K-long decay etc. / more BSM : c2, after c1, 4w
         ECAL design optimization : c3, after c2, 4w
     section HCAL
         HCAL design optimization : after c2, 4w
