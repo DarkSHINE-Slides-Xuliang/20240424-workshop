@@ -123,10 +123,10 @@ Tracking System
 
 Baseline 1.6 Tracker uses <span style="color:#4ec4d4">**Si micro-strip**</span> ( $30 \mathrm{\mu m}$ ) and <span style="color:#4ec4d4">**non-uniform magnetic field**</span>, while Baseline 1.0 uses non-strip (truth hit) and uniform magnetic field.
 
-| Baseline |                                                  | Magnetic Field                                  | Component                                              | Material                | Center Z (mm)                                   | Size (mm)                                                                                                                                                                            | Layer<br>Number           |
-|----------|--------------------------------------------------|-------------------------------------------------|--------------------------------------------------------|-------------------------|-------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|
-| 1.0      | ![img.png](/images/tracker_1.0.png){width=100px} | $B_y=-1.5 \mathrm{T}$                  | Tagging Tracker<br> <br>Target<br> <br>Recoil Tracker  | Si<br> <br>W<br> <br>Si | -607.83 ~ -7.83<br> <br>0<br> <br>7.73 ~ 180.23 | 10, 20, 0.1<br> <br>10, 20, 0.35<br> <br>10~25, 20, 0.1                                                                                                                              | 7x2<br> <br>1<br> <br>6x2 |
-| 1.6      | ![img.png](/images/tracker_1.6.png){width=100px} | ![img.png](/images/bfiled_1.6.png){width=200px} | Tagging Tracker<br> <br>Target<br> <br>Recoil Tracker  | Si<br> <br>W<br> <br>Si | -607.83 ~ -7.83<br> <br>0<br> <br>7.73 ~ 180.23 | 20.1, 10, <span style="color:#4ec4d4">**0.15**</span><br> <br>20, 10, 0.35<br> <br>20.1~50.1, 20, <span style="color:#4ec4d4">**0.15**</span> | 7x2<br> <br>1<br> <br>6x2 |
+| Baseline |                                                  | Magnetic Field                                  | Component                                              | Material                | Center Z (mm)                                   | Size (mm)                                                                                                                                      | Layer<br>Number           |
+|----------|--------------------------------------------------|-------------------------------------------------|--------------------------------------------------------|-------------------------|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|
+| 1.0      | ![img.png](/images/tracker_1.0.png){width=100px} | $B_y=-1.5 \mathrm{T}$                  | Tagging Tracker<br> <br>Target<br> <br>Recoil Tracker  | Si<br> <br>W<br> <br>Si | -607.83 ~ -7.83<br> <br>0<br> <br>7.73 ~ 180.23 | 100, 200, 0.1<br> <br>100, 200, 0.35<br> <br>100~250, 200, 0.1                                                                                 | 7x2<br> <br>1<br> <br>6x2 |
+| 1.6      | ![img.png](/images/tracker_1.6.png){width=100px} | ![img.png](/images/bfiled_1.6.png){width=200px} | Tagging Tracker<br> <br>Target<br> <br>Recoil Tracker  | Si<br> <br>W<br> <br>Si | -607.83 ~ -7.83<br> <br>0<br> <br>7.73 ~ 180.23 | 201, 100, <span style="color:#4ec4d4">**0.15**</span><br> <br>200, 100, 0.35<br> <br>201~501, 200, <span style="color:#4ec4d4">**0.15**</span> | 7x2<br> <br>1<br> <br>6x2 |
 
 ---
 layout: pageBar
@@ -137,10 +137,10 @@ hideInToc: true
 
 ECAL
 
-| Baseline |                                               | Cell Number | Cell Gap | Gap<br>Material | Cell Components | Material | Size |
-|----------|-----------------------------------------------|-------------|----------|-----------------|-----------------|----------|------|
-| 1.0      | ![img.png](/images/ecal_1.0.png){width=100px} |             |          |                 |                 |          |      |
-| 1.6      | ![img.png](/images/ecal_1.6.png){width=120px} |             |          |                 |                 |          |      |
+| Baseline |                                               | Configuration                                    | Cell Number                                       | Cell Gap | Gap<br>Material | Cell Components                | Material                                               | Size (cm)                                      |
+|----------|-----------------------------------------------|--------------------------------------------------|---------------------------------------------------|----------|-----------------|--------------------------------|--------------------------------------------------------|------------------------------------------------|
+| 1.0      | ![img.png](/images/ecal_1.0.png){width=100px} | Cubic                                            | 20, 20, 11                                        | 0.1 mm   | CarbonFiber     | Wrapper<br>APD<br>Scintillator | Al<br>Si<br>LYSO                                       | 2.53, 2.53, 4.13<br>1, 1, 0.1<br>2.5, 2.5, 4.0 |
+| 1.6      | ![img.png](/images/ecal_1.6.png){width=120px} | <span style="color:#4ec4d4">**Staggered**</span> | <span style="color:#4ec4d4">**21, 21**</span>, 11 | 0.1 mm   | CarbonFiber     | Wrapper<br>APD<br>Scintillator | <span style="color:#4ec4d4">**C**</span><br>Si<br>LYSO | 2.53, 2.53, 4.13<br>1, 1, 0.1<br>2.5, 2.5, 4.0 |
 
 ---
 layout: pageBar
@@ -151,12 +151,12 @@ hideInToc: true
 
 HCAL
 
-In Baseline 1.6, The Number is optimized. The Configuration changed to X-Abs-Y. And SideHCAL is added around the 4 sides of ECAL.
+In Baseline 1.6, The Design of HCAL is optimized. SideHCAL is added around the 4 sides of ECAL.
 
-| Baseline |                                               | Cell Number | Cell Gap | Gap<br>Material | Cell Components | Material | Size |
-|----------|-----------------------------------------------|-------------|----------|-----------------|-----------------|----------|------|
-| 1.0      | ![img.png](/images/hcal_1.0.png){width=200px} |             |          |                 |                 |          |      |
-| 1.6      | ![img.png](/images/hcal_1.6.png){width=150px} |             |          |                 |                 |          |      |
+| Baseline |                                               | Configuration | Cell Gap                                      | Module Gap | Gap<br>Material | Cell Components                                        | Material                                       | Size (cm)                                                                   |
+|----------|-----------------------------------------------|---------------|-----------------------------------------------|------------|-----------------|--------------------------------------------------------|------------------------------------------------|-----------------------------------------------------------------------------|
+| 1.0      | ![img.png](/images/hcal_1.0.png){width=200px} | XY-Abs-XY     | 0                                             | 0.5 mm     | CarbonFiber     | Wrapper<br>APD<br>Scintillator                         | Al<br>Si<br>Polystyrene                        | 1.03, 5.03, 100.7<br>0.3, 0.3, 0.1<br>1, 5, 100.57                          |
+| 1.6      | ![img.png](/images/hcal_1.6.png){width=150px} | X-Abs-Y       | <span style="color:#4ec4d4">**0.1 mm**</span> | 0.5 mm     | CarbonFiber     | Wrapper<br>APD<br>Scintillator<br>Fiber Clad<br>Fiber  | Al<br>Si<br>Polystyrene<br>Polystyrene<br>PMMA | 1.03, 5.03, 75.55<br>0.3, 0.3, 0.1<br>1, 5, 75.42<br>r=1.2 mm<br>r=1.176 mm |
 
 
 ---
@@ -266,6 +266,39 @@ layout: pageBar
 
 # Tracking
 
+<br>
+
+<div grid="~ cols-2 gap-1">
+<div>
+
+Dark SHINE Tracking Package:
+- Track Finding
+  - Greedy algorithm
+  - Future ML method
+- Fitting
+  - Kalman filter
+  - Riemann filter
+- Output
+  - Seed for Tracker-ECAL PFA
+  - Vertex for visible decay
+  - ...
+
+</div>
+<div>
+
+Acts Sequencer:
+- SeedingAlgorithm
+  - Default Seeding
+  - Truth Seeding
+- Track Finding & Fitting
+    - CombinatorialKalmanFilter
+- Output
+  - Seed for Tracker-ECAL PFA \[WIP\]
+  - Vertex for visible decay \[WIP\]
+
+</div>
+</div>
+
 ---
 layout: pageBar
 hideInToc: true
@@ -273,7 +306,7 @@ hideInToc: true
 
 # Tracking
 
-We have two seperate Tracking Algorithms. Here only shows the Tracking Efficiency and Energy Resolution of ActsSequencer.
+Filter Efficiency and Resolution (Truth Seeding)
 
 <Transform :scale="0.9">
 
@@ -332,22 +365,33 @@ The smearing of ECAL is done in reconstruction/analysis level. For each ECAL cel
 
 ---
 layout: pageBar
-hideInToc: true
----
-
-# Calorimetry
-
----
-layout: pageBar
 ---
 
 # Future Plans and Timeline
 
----
-layout: pageBar
----
-
-# Summary
+<Transform :scale="1.2">
+<div>
+```mermaid
+gantt
+    dateFormat YYYY-MM-DD
+    section Production
+        4GeV 0.1/0.2 X0, W/Al signal/inclusive : 2024-04-24, 2w
+        Rare process / signal production : 2024-05-07, 4w
+    section Tracker
+        Acts Vertexing : a2, 2024-04-24, 1w
+        Acts Seeding   : a1, 2024-04-24, 3w 
+        Tracker design optimization : after a1, 4w
+        Seed for Tracker-ECAL PFA :c1, 2024-04-24, 1w
+    section ECAL
+        PFA : c2, after c1, 4w
+        ECAL design optimization : c3, after c2, 4w
+    section HCAL
+        HCAL design optimization : after c2, 4w
+    section More BSM
+        Positron :  2024-04-24, 8w
+```
+</div>
+</Transform>
 
 ---
 layout: center
