@@ -172,26 +172,26 @@ timeline
     section Baseline 1.0
     2020 Aug - 2021 Dec : Baseline 1.0
     section Baseline 1.5
-    2022 Apr - Jun : Add DSimu optical simulation
-                   : Add truth information - DTruth
-                   : Optimized simulation speed, event storage, and data transmission between DAna processors
+    2022 Apr - Jun : Major, Add DSimu optical simulation
+                   : Major, Add truth information - DTruth
+                   : Major, Optimized simulation speed, event storage, and data transmission between DAna processors
     2022 Jul - Sep : Add SideHCAL
                    : Add DSimu flexible Biasing / BiasParticle
                    : Add DSimu arguments
     2022 Oct - Dec : Add Staggered ECAL
                    : Add HCAL MC Calibration
                    : Optimized DAna Event Classification
-    2023 Jan - Mar : Add DAna Riemann Fitting 
-                   : Fixe Sensitive Detector bug
+    2023 Jan - Mar : Major, Add DAna Riemann Fitting 
+                   : Fixed Sensitive Detector bug
                    : Optimize Sensitive Detector Speed
     section Baseline 1.6
-    2023 Apr - Jun : Add Vertexing, and GNN Tracking 
-                   : Add ECAL TopoClustering, ML IO
+    2023 Apr - Jun : Major, Add Vertexing, and GNN Tracking 
+                   : Major, Add ECAL TopoClustering, ML IO
                    : Add DDis MC Particle Propagation
-    2023 Nov - Dec : Add DSimu truth filter
+    2023 Nov - Dec : Major, Add DSimu truth filter
                    : More flexible RecECAL
                    : Add options to tune Tracking speed and resolution
-    2024 Feb - Apr : Add DAna ActsSequencer
+    2024 Feb - Apr : Major, Add DAna ActsSequencer
                    : Optimized Tracking Algorithm
                    : Add Tracking Parser
 ```
@@ -275,11 +275,11 @@ layout: pageBar
 
 **Dark SHINE Tracking Package:**
 - Track Finding
-  - Greedy algorithm
+  - <span style="color:#4ec4d4">**Greedy algorithm**</span>
   - Future ML method
 - Fitting
   - Kalman filter
-  - Riemann filter
+  - <span style="color:#4ec4d4">**Riemann filter**</span>
 - Output
   - Seed for Tracker-ECAL PFA
   - Vertex for visible decay
@@ -293,7 +293,7 @@ layout: pageBar
   - Default Seeding
   - Truth Seeding
 - Track Finding & Fitting
-    - CombinatorialKalmanFilter
+    - <span style="color:#4ec4d4">**CombinatorialKalmanFilter**</span>
 - Output
   - Vertex for visible decay
   - Seed for Tracker-ECAL PFA \[WIP\]
