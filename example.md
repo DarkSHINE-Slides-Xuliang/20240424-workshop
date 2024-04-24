@@ -238,6 +238,8 @@ Current Simulation Speed is <span style="color:#4ec4d4">**x21**</span> faster th
 
 ![img](/images/SimuTime.png){width=500px}
 
+Storage: 60KB / event $\to$ 14 KB / event
+
 </div>
 <div>
 
@@ -271,7 +273,7 @@ layout: pageBar
 <div grid="~ cols-2 gap-1">
 <div>
 
-Dark SHINE Tracking Package:
+**Dark SHINE Tracking Package:**
 - Track Finding
   - Greedy algorithm
   - Future ML method
@@ -286,15 +288,15 @@ Dark SHINE Tracking Package:
 </div>
 <div>
 
-Acts Sequencer:
+**Acts Sequencer:**
 - SeedingAlgorithm
   - Default Seeding
   - Truth Seeding
 - Track Finding & Fitting
     - CombinatorialKalmanFilter
 - Output
+  - Vertex for visible decay
   - Seed for Tracker-ECAL PFA \[WIP\]
-  - Vertex for visible decay \[WIP\]
 
 </div>
 </div>
@@ -376,17 +378,19 @@ gantt
     dateFormat YYYY-MM-DD
     section Production
         4GeV 0.1/0.2 X0, W/Al signal/inclusive : 2024-04-24, 2w
-        Rare process / signal production : 2024-05-07, 4w
+        Rare process / signal production : 4w
     section Tracker
-        Acts Vertexing : a2, 2024-04-24, 1w
         Acts Seeding   : a1, 2024-04-24, 3w 
         Tracker design optimization : after a1, 4w
         Seed for Tracker-ECAL PFA :c1, 2024-04-24, 1w
+        Publish ActsSequencer v1.0: after c1, 1h
     section ECAL
-        PFA : c2, after c1, 4w
+        PFA for rare process i.e. GMM, K-long decay etc. : c2, after c1, 4w
         ECAL design optimization : c3, after c2, 4w
     section HCAL
         HCAL design optimization : after c2, 4w
+    section Fast Simulation
+        Fast Simulation : 2024-05-01
     section More BSM
         Positron :  2024-04-24, 8w
 ```
