@@ -308,7 +308,7 @@ hideInToc: true
 
 # Tracking
 
-Filter Efficiency and Resolution (Truth Seeding)
+Tracking Efficiency and Resolution (Truth Seeding)
 
 <Transform :scale="0.9">
 
