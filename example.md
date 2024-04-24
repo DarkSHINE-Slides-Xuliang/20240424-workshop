@@ -322,7 +322,7 @@ Filter Efficiency and Resolution (Truth Seeding)
 <div grid="~ cols-2 gap-20">
 
 <Transform :scale="0.65">
-<PlotlyGraph filePath="https://darkshine-analysis-ykrsama-1c4398ed5549bed87b570e88b7efabc7603d.gitlab.io/actsSequencerV03/plot/json/Res_dActs_RecTrk_P_1_precut.json"/>
+<PlotlyGraph filePath="https://darkshine-analysis-ykrsama-1c4398ed5549bed87b570e88b7efabc7603d.gitlab.io/actsSequencerV03/plot/json/Acts_TagTrk_P__cut2.json"/>
 </Transform>
 
 <Transform :scale="0.65">
