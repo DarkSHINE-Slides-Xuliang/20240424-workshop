@@ -123,10 +123,10 @@ Tracking System
 
 Baseline 1.6 Tracker uses <span style="color:#4ec4d4">**Si micro-strip**</span> ( $30 \mathrm{\mu m}$ ) and <span style="color:#4ec4d4">**non-uniform magnetic field**</span>, while Baseline 1.0 uses non-strip (truth hit) and uniform magnetic field.
 
-| Baseline |                                                  | Magnetic Field                                  | Component                                              | Material                | Center Z (mm)                                   | Size (mm)                                                                                                                                      | Layer<br>Number           |
-|----------|--------------------------------------------------|-------------------------------------------------|--------------------------------------------------------|-------------------------|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|
-| 1.0      | ![img.png](/images/tracker_1.0.png){width=100px} | $B_y=-1.5 \mathrm{T}$                  | Tagging Tracker<br> <br>Target<br> <br>Recoil Tracker  | Si<br> <br>W<br> <br>Si | -607.83 ~ -7.83<br> <br>0<br> <br>7.73 ~ 180.23 | 100, 200, 0.1<br> <br>100, 200, 0.35<br> <br>100~250, 200, 0.1                                                                                 | 7x2<br> <br>1<br> <br>6x2 |
-| 1.6      | ![img.png](/images/tracker_1.6.png){width=100px} | ![img.png](/images/bfiled_1.6.png){width=200px} | Tagging Tracker<br> <br>Target<br> <br>Recoil Tracker  | Si<br> <br>W<br> <br>Si | -607.83 ~ -7.83<br> <br>0<br> <br>7.73 ~ 180.23 | 201, 100, <span style="color:#4ec4d4">**0.15**</span><br> <br>200, 100, 0.35<br> <br>201~501, 200, <span style="color:#4ec4d4">**0.15**</span> | 7x2<br> <br>1<br> <br>6x2 |
+| Baseline |                                                  | Magnetic Field                                  | Component                                                 | Material                | Center Z (mm)                                   |  Size (mm)                                                                                                                                      | Layer<br>Number           |
+|----------|--------------------------------------------------|-------------------------------------------------|-----------------------------------------------------------|-------------------------|-------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|
+| 1.0      | ![img.png](/images/tracker_1.0.png){width=100px} | $B_y=-1.5 \mathrm{T}$                           | Tagging Tracker<br> <br>Target<br> <br>Recoil Tracker     | Si<br> <br>W<br> <br>Si | -607.83 ~ -7.83<br> <br>0<br> <br>7.73 ~ 180.23 |  100, 200, 0.1<br> <br>100, 200, 0.35<br> <br>100~250, 200, 0.1                                                                                 | 7x2<br> <br>1<br> <br>6x2 |
+| 1.6      | ![img.png](/images/tracker_1.6.png){width=100px} | ![img.png](/images/bfiled_1.6.png){width=200px} | Tagging Tracker<br> <br>Target<br> <br>Recoil Tracker     | Si<br> <br>W<br> <br>Si | -607.83 ~ -7.83<br> <br>0<br> <br>7.73 ~ 180.23 |  201, 100, <span style="color:#4ec4d4">**0.15**</span><br> <br>200, 100, 0.35<br> <br>201~501, 200, <span style="color:#4ec4d4">**0.15**</span> | 7x2<br> <br>1<br> <br>6x2 |
 
 ---
 layout: pageBar
@@ -385,7 +385,7 @@ gantt
         Seed for Tracker-ECAL PFA :c1, 2024-04-24, 1w
         Publish ActsSequencer v1.0: after c1, 1h
     section ECAL
-        PFA for rare process i.e. GMM, K-long decay etc. : c2, after c1, 4w
+        PFA for rare process i.e. GMM, K-long decay etc. / LLP : c2, after c1, 4w
         ECAL design optimization : c3, after c2, 4w
     section HCAL
         HCAL design optimization : after c2, 4w
