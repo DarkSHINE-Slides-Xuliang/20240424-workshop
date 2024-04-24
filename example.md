@@ -153,10 +153,10 @@ HCAL
 
 In Baseline 1.6, The Design of HCAL is optimized. SideHCAL is added around the 4 sides of ECAL.
 
-| Baseline |                                               | Configuration | Cell Gap                                      | Module Gap | Gap<br>Material | Cell Components                                        | Material                                       | Size (cm)                                                                   |
-|----------|-----------------------------------------------|---------------|-----------------------------------------------|------------|-----------------|--------------------------------------------------------|------------------------------------------------|-----------------------------------------------------------------------------|
-| 1.0      | ![img.png](/images/hcal_1.0.png){width=200px} | XY-Abs-XY     | 0                                             | 0.5 mm     | CarbonFiber     | Wrapper<br>APD<br>Scintillator                         | Al<br>Si<br>Polystyrene                        | 1.03, 5.03, 100.7<br>0.3, 0.3, 0.1<br>1, 5, 100.57                          |
-| 1.6      | ![img.png](/images/hcal_1.6.png){width=150px} | X-Abs-Y       | <span style="color:#4ec4d4">**0.1 mm**</span> | 0.5 mm     | CarbonFiber     | Wrapper<br>APD<br>Scintillator<br>Fiber Clad<br>Fiber  | Al<br>Si<br>Polystyrene<br>Polystyrene<br>PMMA | 1.03, 5.03, 75.55<br>0.3, 0.3, 0.1<br>1, 5, 75.42<br>r=1.2 mm<br>r=1.176 mm |
+| Baseline |                                               | Configuration                                  | Cell Gap                                      | Module Gap | Gap<br>Material | Cell Components                                                                              | Material                                                                             | Size (cm)                                                                                                          |
+|----------|-----------------------------------------------|------------------------------------------------|-----------------------------------------------|------------|-----------------|----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
+| 1.0      | ![img.png](/images/hcal_1.0.png){width=200px} | XY-Abs-XY                                      | 0                                             | 0.5 mm     | CarbonFiber     | Wrapper<br>APD<br>Scintillator                                                               | Al<br>Si<br>Polystyrene                                                              | 1.03, 5.03, 100.7<br>0.3, 0.3, 0.1<br>1, 5, 100.57                                                                 |
+| 1.6      | ![img.png](/images/hcal_1.6.png){width=150px} | <span style="color:#4ec4d4">**X-Abs-Y**</span> | <span style="color:#4ec4d4">**0.1 mm**</span> | 0.5 mm     | CarbonFiber     | Wrapper<br>APD<br>Scintillator<br><span style="color:#4ec4d4">**Fiber Clad<br>Fiber**</span> | <span style="color:#4ec4d4">**C**</span><br>Si<br>Polystyrene<br>Polystyrene<br>PMMA | 1.03, 5.03, <span style="color:#4ec4d4">**75.55**</span><br>0.3, 0.3, 0.1<br>1, 5, 75.42<br>r=1.2 mm<br>r=1.176 mm |
 
 
 ---
@@ -378,7 +378,7 @@ gantt
     dateFormat YYYY-MM-DD
     section Production
         4GeV 0.1/0.2 X0, W/Al signal/inclusive : 2024-04-24, 2w
-        Rare process / signal production : 4w
+        Rare process / signal production : 2024-05-14, 4w
     section Tracker
         Acts Seeding   : a1, 2024-04-24, 3w 
         Tracker design optimization : after a1, 4w
